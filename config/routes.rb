@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  ActiveAdmin.routes(self)
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'home#index'
 
   # APIコントローラへのルーティング
   namespace :api, {format: 'json'} do
@@ -8,4 +7,6 @@ Rails.application.routes.draw do
       resources :employees, only: [:index, :show]
     end
   end
+
+  ActiveAdmin.routes(self)
 end
