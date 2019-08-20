@@ -1,43 +1,43 @@
 <template>
   <form @submit.prevent="$emit('submit')">
-    <div v-if="errors.length != 0">
+    <div class="alert alert-danger" role="alert" v-if="errors.length != 0">
       <ul v-for="e in errors" :key="e">
         <li><font color="red">{{ e }}</font></li>
       </ul>
     </div>
-    <div>
+    <div class="form-group">
       <label>Name</label>
-      <input v-model="employee.name" type="text">
+      <input class="form-control" v-model="employee.name" type="text">
     </div>
-    <div>
+    <div class="form-group">
       <label>Department</label>
-      <input v-model="employee.department" type="text">
+      <input class="form-control" v-model="employee.department" type="text">
     </div>
-    <div>
+    <div class="form-group">
       <label>Gender</label>
-      <select v-model="employee.gender">
+      <select class="custom-select" v-model="employee.gender">
         <option>other</option>
         <option>male</option>
         <option>female</option>
       </select>
     </div>
-    <div>
+    <div class="form-group">
       <label>Birth</label>
-      <input v-model="employee.birth" type="date">
+      <input class="form-control" v-model="employee.birth" type="date">
     </div>
-    <div>
+    <div class="form-group">
       <label>Joined Date</label>
-      <input v-model="employee.joined_date" type="date">
+      <input class="form-control" v-model="employee.joined_date" type="date">
     </div>
-    <div>
+    <div class="form-group">
       <label>Payment</label>
-      <input v-model="employee.payment" type="number" min="0">
+      <input class="form-control" v-model="employee.payment" type="number" min="0">
     </div>
-    <div>
+    <div class="form-group">
       <label>Note</label>
-      <input v-model="employee.note" type="text">
+      <input class="form-control" v-model="employee.note" type="text">
     </div>
-    <button type="submit">Commit</button>
+    <button class="btn btn-primary" type="submit">Commit</button>
   </form>
 </template>
 

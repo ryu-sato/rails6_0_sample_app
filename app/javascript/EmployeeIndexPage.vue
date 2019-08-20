@@ -1,12 +1,13 @@
 <template>
   <div id="app">
-    <table>
+    <table class="table table-striped table-bordered">
       <tbody>
         <tr>
           <th>ID</th>
           <th>name</th>
           <th>department</th>
           <th>gender</th>
+          <th>actions</th>
         </tr>
         <tr v-for="e in employees" :key="e.id">
           <td><router-link :to="{ name: 'EmployeeDetailPage', params: { id: e.id } }">{{ e.id }}</router-link></td>
@@ -14,11 +15,15 @@
           <td>{{ e.department }}</td>
           <td>{{ e.gender }}</td>
           <td>
-            <button @click="deleteTarget = e.id; showModal = true">Delete</button>
+            <router-link :to="{ name: 'EmployeeEditPage', params: { id: e.id } }">Edit</router-link>
+            <button class="btn btn-outline-danger" @click="deleteTarget = e.id; showModal = true">Delete</button>
           </td>
         </tr>
       </tbody>
     </table>
+    <div>
+        <router-link :to="{ name: 'EmployeeNewPage' }">New</router-link>
+    </div>
     <modal v-if="showModal" @cancel="showModal = false" @ok="deleteEmployee(); showModal = false;">
       <div slot="body">Are you sure?</div>
     </modal>

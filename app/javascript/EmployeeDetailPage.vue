@@ -1,22 +1,25 @@
 <template>
-  <dl>
-    <dt>ID</dt>
-    <dd>{{ employee.id }}</dd>
-    <dt>Name</dt>
-    <dd>{{ employee.name }}</dd>
-    <dt>Department</dt>
-    <dd>{{ employee.department }}</dd>
-    <dt>Gender</dt>
-    <dd>{{ employee.gender }}</dd>
-    <dt>Birth</dt>
-    <dd>{{ employee.birth }}</dd>
-    <dt>Joined Date</dt>
-    <dd>{{ employee.joined_date }}</dd>
-    <dt>Payment</dt>
-    <dd>{{ employee.payment }}</dd>
-    <dt>Note</dt>
-    <dd>{{ employee.note }}</dd>
-  </dl>
+  <div>
+    <dl class="row">
+      <dt class="col-sm-3">ID</dt>
+      <dd class="col-sm-9">{{ employee.id }}</dd>
+      <dt class="col-sm-3">Name</dt>
+      <dd class="col-sm-9">{{ employee.name }}</dd>
+      <dt class="col-sm-3">Department</dt>
+      <dd class="col-sm-9">{{ employee.department }}</dd>
+      <dt class="col-sm-3">Gender</dt>
+      <dd class="col-sm-9">{{ employee.gender }}</dd>
+      <dt class="col-sm-3">Birth</dt>
+      <dd class="col-sm-9">{{ employee.birth }}</dd>
+      <dt class="col-sm-3">Joined Date</dt>
+      <dd class="col-sm-9">{{ employee.joined_date }}</dd>
+      <dt class="col-sm-3">Payment</dt>
+      <dd class="col-sm-9">{{ employee.payment }}</dd>
+      <dt class="col-sm-3">Note</dt>
+      <dd class="col-sm-9">{{ employee.note }}</dd>
+    </dl>
+    <router-link :to="{ name: 'EmployeeIndexPage' }">Index</router-link>
+  </div>
 </template>
 
 <script>
