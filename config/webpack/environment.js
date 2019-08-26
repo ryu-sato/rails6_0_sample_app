@@ -16,3 +16,6 @@ environment.plugins.append(
 )
 
 module.exports = environment
+
+// Enable SplitChunks with the default config
+environment.splitChunks()
