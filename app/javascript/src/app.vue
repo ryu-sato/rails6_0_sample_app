@@ -8,10 +8,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import EmployeeIndexPage from 'EmployeeIndexPage.vue'
-import EmployeeDetailPage from 'EmployeeDetailPage.vue'
-import EmployeeNewPage from 'EmployeeNewPage.vue'
-import EmployeeEditPage from 'EmployeeEditPage.vue'
+import EmployeeIndexPage from './EmployeeIndexPage.vue'
+import EmployeeDetailPage from './EmployeeDetailPage.vue'
+import EmployeeNewPage from './EmployeeNewPage.vue'
+import EmployeeEditPage from './EmployeeEditPage.vue'
 
 const router = new VueRouter({
   routes: [

@@ -5,7 +5,7 @@
 <script>
 import axios from 'axios';
 
-import EmployeeFormPane from 'EmployeeFormPane.vue';
+import EmployeeFormPane from './EmployeeFormPane.vue';
 
 export default {
   components: {
